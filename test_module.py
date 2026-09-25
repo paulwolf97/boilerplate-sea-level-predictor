@@ -7,7 +7,8 @@ import numpy as np
 # the test case
 class LinePlotTestCase(unittest.TestCase):
     def setUp(self):
-        self.ax = sea_level_predictor.draw_plot()
+        self.fig = sea_level_predictor.draw_plot()
+        self.ax =self.fig.axes[0]
 
     def test_plot_title(self):
         actual = self.ax.get_title()
